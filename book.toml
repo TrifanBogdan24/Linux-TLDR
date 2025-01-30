@@ -1,0 +1,5 @@
+[book]
+authors = ["TrifanBogdan24"]
+language = "en"
+multilingual = false
+src = "src"

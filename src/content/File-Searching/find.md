@@ -98,3 +98,11 @@ find . -name '*.c*' -exec sed -i 's/old text/new text/g' {} +
 ```
 
 
+
+## Rename all C files to CPP
+---
+
+
+```sh
+find . -type f -name "*.c" -exec bash -c 'mv "$0" "${0%.c}.cpp"' {} \;
+```

@@ -29,3 +29,11 @@
 - [find](./content/File-Searching/find.md)
 - [jq](./content/File-Searching/jq.md)
 
+
+
+# System Administration
+---
+- [Packages](./content/System-Administrator/packages.md)
+  - [nala](./content/System-Administrator/Packages/nala.md)
+  - [apt](./content/System-Administrator/Packages/apt.md)
+  - [dpkg](./content/System-Administrator/Packages/dpkg.md)

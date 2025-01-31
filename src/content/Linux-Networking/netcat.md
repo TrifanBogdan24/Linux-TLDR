@@ -2,6 +2,7 @@
 
 
 ## **TL;DR**
+---
 
 Redirect I/O into a network stream through this versatile tool.
 
@@ -34,6 +35,7 @@ echo -e "GET / HTTP/1.1\nHost: host\n\n" | nc host 80
 
 
 ## File Transfer
+---
 
 
 > Source from: <https://www.youtube.com/shorts/1j17UBGqSog?feature=share>.
@@ -71,6 +73,7 @@ shat512sum SECRETS.txt
 
 
 ## Options
+---
 
 
 | Flag | Example Command              | Description                            |

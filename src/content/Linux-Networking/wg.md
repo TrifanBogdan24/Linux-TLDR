@@ -3,7 +3,8 @@
 You can find all information here: <https://www.wireguard.com/>.
 
 
-## TL;DR
+## **TL;DR**
+---
 
 Manage the configuration of WireGuard interfaces.
 
@@ -29,6 +30,7 @@ sudo wg showconf wg0
 
 
 ## Key Pair Creation
+---
 
 
 ```sh
@@ -42,6 +44,8 @@ wg genkey > /path/privatekey && wg pubkey < /path/privatekey > /path/publickey
 
 
 ## Configuration file examples
+---
+
 
 WireGuard encapuslates and encrypts all data using **UDP** with default **port 51820**.
 
@@ -53,6 +57,7 @@ nano -l /etc/interfaces/<wg-interface-name>.conf
 
 
 ### Pattern
+---
 
 
 ```conf
@@ -69,6 +74,7 @@ AllowedIPs = <tunnel-subnet>/<mask>
 
 
 ### WireGuard **End-to-End** Tunnel
+---
 
 
 
@@ -112,6 +118,7 @@ PersistentKeepalive = 60
 
 
 ### WireGuard **Server-Clients** Tunnel
+---
 
 
 For example, a **server** computer might have this configuration:
@@ -152,9 +159,10 @@ AllowedIPs = 0.0.0.0/0
 
 
 ## Creating the WireGuard interfaces
-
+---
 
 ### The `iproute2` way
+---
 
 
 ```sh
@@ -167,6 +175,7 @@ ip address add <IP>/<mask> dev wg-isc
 
 
 ### Using `wg-quick`
+---
 
 
 > The WireGuard interface name must match the name of the file **/etc/wireguard/\<wg-interface\>.conf**.
@@ -195,6 +204,8 @@ $ wg-quick down wg-isc
 
 
 ## WireGuard statistics
+---
+
 
 ```sh
 wg

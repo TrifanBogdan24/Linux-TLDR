@@ -1,6 +1,7 @@
 # Linux TL;DR
 
 # Linux Networking
+---
 
 - [wg](./content/Linux-Networking/wg.md)
 - [nc](./content/Linux-Networking/netcat.md)
@@ -18,3 +19,13 @@
 
 
 - [ip](./content/Linux-Networking/ip.md)
+
+
+# File Searching
+---
+- [awk](./content/File-Searching/awk.md)
+- [grep](./content/File-Searching/grep.md)
+- [sed](./content/File-Searching/sed.md)
+- [find](./content/File-Searching/find.md)
+- [jq](./content/File-Searching/jq.md)
+

@@ -16,6 +16,7 @@
   - [ssh-config](./content/Linux-Networking/ssh/ssh-config.md)
   - [ssh](./content/Linux-Networking/ssh.md)
   - [scp](./content/Linux-Networking/ssh/scp.md)
+  - [Reverse SSH](./content/Linux-Networking/ssh/reverse-ssh.md)
 
 
 - [ip](./content/Linux-Networking/ip.md)

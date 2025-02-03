@@ -16,6 +16,7 @@
   - [ssh-config](./content/Linux-Networking/ssh/ssh-config.md)
   - [ssh](./content/Linux-Networking/ssh.md)
   - [scp](./content/Linux-Networking/ssh/scp.md)
+  - [SSH for GitHub](./content/Linux-Networking/ssh/ssh-github.md)
   - [Reverse SSH](./content/Linux-Networking/ssh/reverse-ssh.md)
 
 

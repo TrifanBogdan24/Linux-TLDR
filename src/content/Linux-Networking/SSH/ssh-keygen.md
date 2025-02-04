@@ -45,13 +45,13 @@ Generating a **SSH key pair** programatically, without asking anything from the 
 
 
 ```sh
-ssh-keygen -t ed25519 -f ~/.ssh/path -N ""
+ssh-keygen -t ed25519 -f  -N "" ~/.ssh/path
 ```
 
 ...Or, using RSA:
 
 ```sh
-ssh-keygen -t rsa -b 4096 -f ~/.ssh/path -N ""
+ssh-keygen -t rsa -b 4096 -f  -N "" ~/.ssh/path
 ```
 
 > **-N** option is used to specify a **passphrase** (a *password*). It adds more security.

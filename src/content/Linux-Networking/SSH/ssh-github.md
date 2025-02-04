@@ -1,4 +1,4 @@
-# `ssh` GitHub
+# `SSH` for GitHub
 
 
 <iframe width="500" height="300" src="https://www.youtube.com/embed/X40b9x9BFGo" title="🐱Generate a New SSH Key and Add it to your GitHub" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -41,7 +41,6 @@ If the above command runs successfully, it will prompt:
 ```
 Hi <UserName>! You've successfully authenticated, but GitHub does not provide shell access.
 ```
-remote.origin.url=git@github.com:<UserName>/<RepoName>.gi
 
 SSH config entry for GitHub:
 

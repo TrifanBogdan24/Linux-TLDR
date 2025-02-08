@@ -1,9 +1,21 @@
-# Reverse SSH Tunnel
+# Remote Port Forwarding
 
-TODO: corecteaza si verifica sa vezi sa fie bine
+> a.k.a **Reverse SSH**/**Reverse Port Forwarding**.
+
+
+> Seach for **`-R` flag** in the SSH manual page.
+
+- **-R [bind_address:]port:host:hostport**
+- **-R [bind_address:]port:local_socket**
+- **-R remote_socket:host:hostport**
+- **-R remote_socket:local_socket**
+- **-R [bind_address:]port**
 
 ## What is a Reverse Tunnel
 ---
+
+TODO: corecteaza si verifica sa vezi sa fie bine
+
 
 > **TL;DR**:
 > - we act as a **server** instead of a client
@@ -29,14 +41,14 @@ However, things can happen the opposite (**reversed**) way: we can also act as a
 
 
 ```sh
-ssh -N -R localhost:<port-on-server><IP-client>:<port-on-client> <client-user>@<IP-client>
+ssh -N -R localhost:<port-on-server>:<IP-client>:<port-on-client> <client-user>@<IP-client>
 ```
 
 Short hand version:
 
 
 ```sh
-ssh -N -R <port-on-server><IP-client>:<port-on-client> <client-user>@<IP-client>
+ssh -N -R <port-on-server>:<IP-client>:<port-on-client> <client-user>@<IP-client>
 ```
 
 
@@ -49,7 +61,7 @@ ssh -N -R <port-on-server><IP-client>:<port-on-client> <client-user>@<IP-client>
 ---
 
 
-<iframe width="897" height="505" src="https://www.youtube.com/embed/TZ6W9Hi9YJw" title="How to Reverse SSH Tunnel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="750px" height="425px" src="https://www.youtube.com/embed/TZ6W9Hi9YJw" title="How to Reverse SSH Tunnel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 
@@ -64,3 +76,5 @@ The local port on 8888 will be accessible on the remote machine
 ssh -N -R 8888:192.168.1.6:80 root@159.223.180.93
 ```
 
+
+![img](../Images/Reverse-SSH-Tunnel.png)

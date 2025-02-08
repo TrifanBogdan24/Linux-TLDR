@@ -1,5 +1,16 @@
 [book]
 authors = ["TrifanBogdan24"]
+title = "📑 Linux Sheets"
 language = "en"
 multilingual = false
 src = "src"
+
+
+
+[output.html]
+mathjax-support = true
+default-theme = "ayu"
+preferred-dark-theme = "ayu"
+git-repository-url = "https://github.com/TrifanBogdan24/Linux-TLDR.git"
+edit-url-template = "https://github.com/TrifanBogdan24/Linux-TLDR.git"
+

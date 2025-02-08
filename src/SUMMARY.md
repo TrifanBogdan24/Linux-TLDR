@@ -27,7 +27,10 @@
   - [ssh](content/Linux-Networking/SSH/ssh.md)
   - [scp](content/Linux-Networking/SSH/scp.md)
   - [SSH for GitHub](content/Linux-Networking/SSH/ssh-github.md)
-  - [Reverse SSH](content/Linux-Networking/SSH/reverse-ssh.md)
+  - [Change SSH port](./content/Linux-Networking/SSH/change-SSH-port.md)
+  - [Port Forwarding](./content/Linux-Networking/SSH/port-forwarding.md)
+    - [Local Port Fowarding](./content/Linux-Networking/SSH/PortFowarding/local-port-fowarding.md)
+    - [Remote Port Forwarding](./content/Linux-Networking/SSH/PortFowarding/remote-port-forwarding.md)
 
 - [rsync](./content/Linux-Networking/rsync.md)
 

@@ -2,6 +2,8 @@
 
 > By default, SSH runs on **port 22**, but we can change that.
 
+> Edit `/etc/ssh/sshd_config` file.
+
 ## Commands
 ---
 
@@ -58,8 +60,8 @@ ssh <user>@<IP/hostname> -p <port>
 
 <iframe width="750" height="425" src="https://www.youtube.com/embed/NRH7mOVhHok" title="How to change the SSH port on Linux or Unix servers | VPS Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-![img](./Images/change-SSH-port-img-1.png)
-![img](./Images/change-SSH-port-img-2.png)
+![img](Images/change-SSH-port/img-1.png)
+![img](Images/change-SSH-port/img-2.png)
 
 
 

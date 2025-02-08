@@ -38,7 +38,15 @@ nala history
 
 
 
-## Installing nala
+## Stop using APT
+---
+
+
+<iframe width=600px height="350px" aspect-ratio=16/9 src="https://www.youtube.com/embed/oroSkR4Nn_w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+
+## Install nala
 ---
 
 > Check out this link: <https://gitlab.com/volian/nala/-/wikis/Installation>.
@@ -65,12 +73,6 @@ sudo apt install -t nala nala
 
 
 
-
-## Stop using APT
----
-
-
-<iframe width=600px height="350px" aspect-ratio=16/9 src="https://www.youtube.com/embed/oroSkR4Nn_w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 ## Results for `nala`

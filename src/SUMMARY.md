@@ -23,7 +23,7 @@
 - [SSH](content/Linux-Networking/SSH.md)
   - [ssh-keygen](content/Linux-Networking/SSH/ssh-keygen.md)
   - [ssh-copy-id](content/Linux-Networking/SSH/ssh-copy-id.md)
-  - [ssh-config](content/Linux-Networking/SSH/ssh-config.md)
+  - [~./ssh/config file](content/Linux-Networking/SSH/ssh-config.md)
   - [ssh](content/Linux-Networking/SSH/ssh.md)
   - [scp](content/Linux-Networking/SSH/scp.md)
   - [SSH for GitHub](content/Linux-Networking/SSH/ssh-github.md)
@@ -52,3 +52,10 @@
   - [nala](./content/System-Administrator/Packages/nala.md)
   - [apt](./content/System-Administrator/Packages/apt.md)
   - [dpkg](./content/System-Administrator/Packages/dpkg.md)
+
+- [Users](./content/System-Administrator/Users/users.md)
+  - [useradd](./content/System-Administrator/Users/useradd.md)
+  - [adduser](./content/System-Administrator/Users/adduser.md)
+  - [userdel](./content/System-Administrator/Users/userdel.md)
+  - [chsh](./content/System-Administrator/Users/chsh.md)
+ 

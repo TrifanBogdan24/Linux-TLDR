@@ -16,7 +16,7 @@
     - [GRE](content/Linux-Networking/IP/use-of-ip/GRE.md)
 
 
-- [wg](./content/Linux-Networking/wg.md)
+- [WireGuard](./content/Linux-Networking/wg.md)
 
 
 ## SSH
@@ -27,11 +27,11 @@
   - [ssh](content/Linux-Networking/SSH/ssh.md)
   - [scp](content/Linux-Networking/SSH/scp.md)
   - [SSH for GitHub](content/Linux-Networking/SSH/ssh-github.md)
-  - [Change SSH port](./content/Linux-Networking/SSH/change-SSH-port.md)
   - [Port Forwarding](./content/Linux-Networking/SSH/port-forwarding.md)
     - [Local Port Fowarding](./content/Linux-Networking/SSH/PortFowarding/local-port-fowarding.md)
     - [Remote Port Forwarding](./content/Linux-Networking/SSH/PortFowarding/remote-port-forwarding.md)
   - [How to become an SSH Server](./content/Linux-Networking/SSH/becoming-an-SSH-server.md)
+  - [Change port SSH runs on](./content/Linux-Networking/SSH/change-SSH-port.md)
 
 - [rsync](./content/Linux-Networking/rsync.md)
 
@@ -57,9 +57,15 @@
   - [apt](./content/System-Administrator/Packages/apt.md)
   - [dpkg](./content/System-Administrator/Packages/dpkg.md)
 
-- [Users](./content/System-Administrator/Users/users.md)
-  - [useradd](./content/System-Administrator/Users/useradd.md)
-  - [adduser](./content/System-Administrator/Users/adduser.md)
-  - [userdel](./content/System-Administrator/Users/userdel.md)
-  - [chsh](./content/System-Administrator/Users/chsh.md)
- 
+- [Users](content/System-Administrator/Users/QAs/users.md)
+  - [Tools](./content/System-Administrator/Users/tools.md) 
+    - [useradd](content/System-Administrator/Users/Tools/useradd.md)
+    - [adduser](content/System-Administrator/Users/Tools/adduser.md)
+    - [userdel](content/System-Administrator/Users/Tools/userdel.md)
+    - [chsh](content/System-Administrator/Users/Tools/chsh.md)
+    - [passwd](./content/System-Administrator/Users/Tools/passwd.md)
+  - [Q&As](./content/System-Administrator/Users/QAs.md)
+    - [Change user's name](./content/System-Administrator/Users/QAs/change-user-name.md)
+    - [Change user's password](./content/System-Administrator/Users/QAs/change-user-password.md)
+    - [Change user's default shell](./content/System-Administrator/Users/QAs/change-user-shell.md)
+

@@ -1,5 +1,7 @@
 # `wg` (WireGurad)
 
+[![img](https://upload.wikimedia.org/wikipedia/commons/9/98/Logo_of_WireGuard.svg)](https://www.wireguard.com/)
+
 You can find all information here: <https://www.wireguard.com/>.
 
 

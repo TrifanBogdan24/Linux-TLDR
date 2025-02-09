@@ -1,6 +1,7 @@
 # `chsh`
 
 ## **TL;DR**
+---
 
 Change user's login shell.
 

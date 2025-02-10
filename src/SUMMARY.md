@@ -30,8 +30,9 @@
   - [Port Forwarding](./content/Linux-Networking/SSH/port-forwarding.md)
     - [Local Port Fowarding](./content/Linux-Networking/SSH/PortFowarding/local-port-fowarding.md)
     - [Remote Port Forwarding](./content/Linux-Networking/SSH/PortFowarding/remote-port-forwarding.md)
-  - [How to become an SSH Server](./content/Linux-Networking/SSH/becoming-an-SSH-server.md)
-  - [Change port SSH runs on](./content/Linux-Networking/SSH/change-SSH-port.md)
+  - [SSH Server](./content/Linux-Networking/SSH/SSH-Server.md)
+    - [Hosting an SSH Server](content/Linux-Networking/SSH/SSH-Server/becoming-an-SSH-server.md)
+    - [Change port SSH runs on](content/Linux-Networking/SSH/SSH-Server/change-SSH-port.md)
 
 - [rsync](./content/Linux-Networking/rsync.md)
 

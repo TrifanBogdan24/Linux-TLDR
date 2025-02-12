@@ -70,6 +70,11 @@
     - [Change user's password](./content/System-Administrator/Users/QAs/change-user-password.md)
     - [Change user's default shell](./content/System-Administrator/Users/QAs/change-user-shell.md)
 
+ 
+# Public Key Infrastructure (PKI)
+---
+- [Certification Athority (CA)](./content/Public-Key-Infrastructure/CA-Certification-Authority.md)
+- [How to create certificates](./content/Public-Key-Infrastructure/how-to-create-certificates.md)
 
 # 🐳 Docker
 ---

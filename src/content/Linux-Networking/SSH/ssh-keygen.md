@@ -37,6 +37,24 @@ ssh-keygen -y -f ~/.ssh/OpenSSH_private_key
 ```
 
 
+## Non-Interactive SSH Key Pair Setup
+---
+
+Generating a **SSH key pair** programatically, without asking anything from the **stdin**.
+
+
+```sh
+ssh-keygen -t ed25519 -N "" -f ~/.ssh/path
+```
+
+...Or, using RSA:
+
+```sh
+ssh-keygen -t rsa -b 4096 -N "" -f ~/.ssh/path
+```
+
+
+
 ## Options
 ---
 
@@ -57,20 +75,3 @@ ssh-keygen -y -f ~/.ssh/OpenSSH_private_key
 > **KDF** stadn for Key Derivation Function
 
 
-## All in one go
----
-
-Generating a **SSH key pair** programatically, without asking anything from the **stdin**.
-
-
-```sh
-ssh-keygen -t ed25519 -N "" -f ~/.ssh/path
-```
-
-...Or, using RSA:
-
-```sh
-ssh-keygen -t rsa -b 4096 -N "" -f ~/.ssh/path
-```
-
-> **-N** option is used to specify a **passphrase** (a *password*). It adds more security.

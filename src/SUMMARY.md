@@ -71,7 +71,7 @@
     - [Change user's default shell](./content/System-Administrator/Users/QAs/change-user-shell.md)
 
  
-# Public Key Infrastructure (PKI)
+# 🔑 Public Key Infrastructure (PKI)
 ---
 - [Certificates](./content/Public-Key-Infrastructure/certificates.md)
   - [Certification Athority (CA)](content/Public-Key-Infrastructure/Certificates/CA-Certification-Authority.md)

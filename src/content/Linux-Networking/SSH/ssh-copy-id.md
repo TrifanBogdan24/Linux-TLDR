@@ -5,6 +5,8 @@ Is used to copy a **SSH public key** in the `~/.ssh/authorized_keys` file of a r
 
 > ⚠️ DON'T copy the **private key**!
 
+> ⚠️ Copy only the `public key` (it has **`.pub` extension**)!
+
 
 
 ## **TL;DR**

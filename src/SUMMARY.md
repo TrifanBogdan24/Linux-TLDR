@@ -73,8 +73,11 @@
  
 # Public Key Infrastructure (PKI)
 ---
-- [Certification Athority (CA)](./content/Public-Key-Infrastructure/CA-Certification-Authority.md)
-- [How to create certificates](./content/Public-Key-Infrastructure/how-to-create-certificates.md)
+- [Certificates](./content/Public-Key-Infrastructure/certificates.md)
+  - [Certification Athority (CA)](content/Public-Key-Infrastructure/Certificates/CA-Certification-Authority.md)
+  - [How to create certificates](content/Public-Key-Infrastructure/Certificates/how-to-create-certificates.md)
+- [CLI Tools](./content/Public-Key-Infrastructure/CLI-tools.md)
+  - [openssl](./content/Public-Key-Infrastructure/CLI-tools/openssl.md) 
 
 # 🐳 Docker
 ---

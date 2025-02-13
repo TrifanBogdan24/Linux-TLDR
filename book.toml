@@ -15,11 +15,6 @@ git-repository-url = "https://github.com/TrifanBogdan24/Linux-TLDR.git"
 edit-url-template = "https://github.com/TrifanBogdan24/Linux-TLDR.git"
 
 
-
-[preprocessor.toc]
-command = "./mdbook-toc"
-renderer = ["html"]
-
 [output.html.fold]
 enable = true
 level = 0

@@ -1,5 +1,41 @@
 # `gpg`
 
+Table of Conents:
+
+- [`gpg`](#gpg)
+  - [Installation](#installation)
+  - [**TL;DR**](#tldr)
+  - [List public keys](#list-public-keys)
+  - [List secret keys](#list-secret-keys)
+  - [Exporting GPG keys](#exporting-gpg-keys)
+    - [Export public key](#export-public-key)
+    - [Export private key](#export-private-key)
+  - [Import a public key](#import-a-public-key)
+  - [Sign a public key](#sign-a-public-key)
+  - [Delete GPG keys](#delete-gpg-keys)
+  - [Edit a key](#edit-a-key)
+  - [Grant **encryption** capabilities to a **key-pair**](#grant-encryption-capabilities-to-a-key-pair)
+  - [Encrypt a file with GPG](#encrypt-a-file-with-gpg)
+  - [Decrypt a file with GPG](#decrypt-a-file-with-gpg)
+
+## Installation
+---
+
+
+Ob Ubuntu/Debian:
+```sh
+sudo apt update && sudo apt -y install gnupg rng-tools
+```
+
+
+> `RNG` is a service that adds **entropy** during key generation with GPG.
+
+Verify RNG to be **active**:
+
+```sh
+sudo systemctl status rng-tools
+```
+
 
 ## **TL;DR**
 ---
@@ -65,6 +101,14 @@ Let's look at the first key and explain the format:
 - **uid**: user associated with the key, including trust level and email
   - `[ultimate]` and `[unkown]` are **trust levels** 
 
+
+To list only a specific key:
+
+```sh
+gpg --list-key <keyID|mail>   
+```
+
+
 ## List secret keys
 ---
 
@@ -85,6 +129,121 @@ uid           [ultimate] green <green@cs.pub.ro>
 > In this example, the **key ID** is `136E3F0C4558CE824270B63FAE8FA41610D6234C`.
 
 
+To list only a specific key:
+
+```sh
+gpg --list-secret <keyID|mail>   
+```
+
+
+
+
+## Exporting GPG keys
+---
+
+
+| Option | Description |
+| :---: | :--- |
+| `--export` | Exports the **public key** |
+| `--export-secret-key` | Exports the **secret key** |
+| `--armor` | Ensures the output is **ASCII-armored**<br>(i.e., Base64-encoded text rather than binary) |
+
+
+> `.asc` file extension stands for **"ASCII armored"**
+
+### Export public key
+---
+
+- To **stdout**:
+```sh
+gpg --export --armor <keyID|mail>
+```
+
+
+- To a **file**:
+```sh
+gpg --export --armor <keyID|mail> > /path/to/exported-public-key.asc
+```
+
+
+
+The `public key` looks like:
+```
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+....
+
+-----END PGP PUBLIC KEY BLOCK-----
+```
+
+
+### Export private key
+---
+
+- To **stdout**:
+```sh
+gpg --export-secret-key --armor <keyID|mail>
+```
+
+
+- To a **file**:
+```sh
+gpg --export-secret-key --armor <keyID|mail> > /path/to/exported-private-key.asc
+```
+
+The `private key` looks like:
+```
+-----BEGIN PGP PRIVATE KEY BLOCK-----
+
+....
+
+
+-----END PGP PRIVATE KEY BLOCK-----
+```
+
+
+
+
+## Import a public key
+---
+
+
+```sh
+gpg --import /path/to/imported-public-key.asc
+```
+
+> After importing the key you should list it and double check that it was stored in the public ring.
+
+
+
+## Sign a public key
+---
+
+> Look for the `--sign-key` option in the [manual](https://www.gnupg.org/documentation/manuals/gnupg24/gpg.1.html).
+
+```sh
+gpg --sign-key <keyID|mail>
+```
+
+
+
+## Delete GPG keys
+---
+
+
+```sh
+gpg --delete-key <keyID|mail>             # Deletes only public key
+gpg --delete-private-key <keyID|mail>     # Deletes only private key
+gpg --delete-keys <keyID|mail>            # Deletes both public and private key
+```
+
+| Option                 | Description |
+| :---                   | :--- |
+| `--delete-private-key` | Deletes only the **private key** |
+| `--delete-key`         | Deletes only the **public key**<br>Throws an error if the private key still exists |
+| `--delete-keys`        | Deletes both **private and public keys** (simultanously) |
+
+
 
 ## Edit a key
 ---
@@ -96,83 +255,29 @@ gpg --edit-key <key-ID>
 ```
 
 
+
 ## Grant **encryption** capabilities to a **key-pair**
 ---
 
 When creating a key-pair with `gpg --list-keys`,
 by default, it will have `[SC]` (**signing** and **certification**) only.
 
+
+> Changing the **roles** of the `public key` also involves modifying the `private key` as well 🙂.<br>
+
 If we want to encrypt data/files with the key, we must **manually grant encryption role**:
 
 ```sh
-$ gpg --edit-key <key-ID>
-gpg> addkey
+$ gpg --edit-key <key-ID|mail>
+gpg> addkey    # Choose RSA (encrypt only)
 gpg> save
 ```
 
-Example:
-
-```sh
-blue@isc-vm:~$ gpg --list-keys
-/home/blue/.gnupg/pubring.kbx
------------------------------
-pub   rsa4096 2025-02-14 [SC] [expires: 2025-02-28]
-      3F02B56EAF1570792C194ABD0DB15707A553AA81
-uid           [ultimate] blue-user <blue@cs.pub.ro>
-
-blue@isc-vm:~$ gpg --edit-key 3F02B56EAF1570792C194ABD0DB15707A553AA81
-gpg (GnuPG) 2.2.27; Copyright (C) 2021 Free Software Foundation, Inc.
-This is free software: you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law.
-
-Secret key is available.
-
-sec  rsa4096/0DB15707A553AA81
-     created: 2025-02-14  expires: 2025-02-28  usage: SC  
-     trust: ultimate      validity: ultimate
-[ultimate] (1). blue-user <blue@cs.pub.ro>
-
-gpg> addkey
-Please select what kind of key you want:
-   (3) DSA (sign only)
-   (4) RSA (sign only)
-   (5) Elgamal (encrypt only)
-   (6) RSA (encrypt only)
-  (14) Existing key from card
-Your selection? 6
-RSA keys may be between 1024 and 4096 bits long.
-What keysize do you want? (3072) 4096
-Requested keysize is 4096 bits
-Please specify how long the key should be valid.
-         0 = key does not expire
-      <n>  = key expires in n days
-      <n>w = key expires in n weeks
-      <n>m = key expires in n months
-      <n>y = key expires in n years
-Key is valid for? (0) 2w
-Key expires at Fri 28 Feb 2025 01:37:39 PM EET
-Is this correct? (y/N) y
-Really create? (y/N) y
-We need to generate a lot of random bytes. It is a good idea to perform
-some other action (type on the keyboard, move the mouse, utilize the
-disks) during the prime generation; this gives the random number
-generator a better chance to gain enough entropy.
-
-sec  rsa4096/0DB15707A553AA81
-     created: 2025-02-14  expires: 2025-02-28  usage: SC  
-     trust: ultimate      validity: ultimate
-ssb  rsa4096/0091BAA27E90895D
-     created: 2025-02-14  expires: 2025-02-28  usage: E   
-[ultimate] (1). blue-user <blue@cs.pub.ro>
-
-gpg> save
-
-```
-
-> The **key ID** in the above examples is `3F02B56EAF1570792C194ABD0DB15707A553AA81`.
 
 
 And verify again:
+
+> The **key ID** in the below example is `3F02B56EAF1570792C194ABD0DB15707A553AA81`.
 
 
 ```sh
@@ -186,3 +291,28 @@ sub   rsa4096 2025-02-14 [E] [expires: 2025-02-28]
 ```
 
 > `[E]` stands for **encryption role**.
+
+
+## Encrypt a file with GPG
+---
+
+```sh
+gpg --encrypt --recipient <keyID|mail> letter.txt
+```
+
+> ⚠️ Redirection doesn't work.
+
+> ⚠️ In this case, `letter.txt.gpg` will be automatically created.
+
+
+## Decrypt a file with GPG
+---
+
+
+```sh
+gpg --decrypt secret.txt.gpg
+```
+
+> ⚠️ Redirection doesn't work.
+
+> ⚠️ It will print the decrypted text to `stdout`, as long as details of the encryption key.

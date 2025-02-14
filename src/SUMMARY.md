@@ -79,13 +79,14 @@
     - [Change user's default shell](./content/System-Administrator/Users/QAs/change-user-shell.md)
 
  
-# 🔑 Public Key Infrastructure (PKI)
+# 🔑 Crypto & PKI
 ---
-- [Certificates](./content/Public-Key-Infrastructure/certificates.md)
-  - [Certification Athority (CA)](content/Public-Key-Infrastructure/Certificates/CA-Certification-Authority.md)
-  - [How to create certificates](content/Public-Key-Infrastructure/Certificates/how-to-create-certificates.md)
-- [CLI Tools](./content/Public-Key-Infrastructure/CLI-tools.md)
-  - [openssl](./content/Public-Key-Infrastructure/CLI-tools/openssl.md) 
+- [Certificates](content/Crypto-and-PKI/certificates.md)
+  - [Certification Athority (CA)](content/Crypto-and-PKI/Certificates/CA-Certification-Authority.md)
+  - [How to create certificates](content/Crypto-and-PKI/Certificates/how-to-create-certificates.md)
+- [CLI Tools](content/Crypto-and-PKI/CLI-tools.md)
+  - [openssl](content/Crypto-and-PKI/CLI-tools/openssl.md)
+  - [gpg](./content/Crypto-and-PKI/CLI-tools/gpg.md)
 
 # 🐳 Docker
 ---

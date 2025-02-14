@@ -143,7 +143,7 @@ gpg --list-secret <keyID|mail>
 
 
 | Option | Description |
-| :---: | :--- |
+| :--- | :--- |
 | `--export` | Exports the **public key** |
 | `--export-secret-key` | Exports the **secret key** |
 | `--armor` | Ensures the output is **ASCII-armored**<br>(i.e., Base64-encoded text rather than binary) |

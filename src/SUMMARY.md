@@ -87,6 +87,7 @@
 - [CLI Tools](content/Crypto-and-PKI/CLI-tools.md)
   - [openssl](content/Crypto-and-PKI/CLI-tools/openssl.md)
   - [gpg](./content/Crypto-and-PKI/CLI-tools/gpg.md)
+    - [Using GPG for Git](./content/Crypto-and-PKI/CLI-tools/gpg-with-git.md)
 
 # 🐳 Docker
 ---

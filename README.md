@@ -23,9 +23,15 @@ cargo install mdbook mdbook-toc
 ```
 
 
-# Hosting the web server
+# Self-Hosting the web server
 
 
 ```sh
-mdbook serve -p <port>
+mdbook serve -p 8080
 ```
+
+In your browser, open this URL: <http://localhost:8080>.
+
+> When the port is not specified, `mdbook` runs by default on port **3000**.
+
+

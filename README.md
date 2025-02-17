@@ -35,3 +35,6 @@ In your browser, open this URL: <http://localhost:8080>.
 > When the port is not specified, `mdbook` runs by default on port **3000**.
 
 
+Now you can easily navigate to your desired **Cheat Sheet**, using the **Graphical User Interface** of the website.
+
+![img](./website-screen-shot.png)

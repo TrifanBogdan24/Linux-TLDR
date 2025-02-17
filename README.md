@@ -1,3 +1,16 @@
+# Description  
+
+This repository contains the source code for a website
+that serves as a collection of **cheat sheets** for various **Linux** commands and tools.  
+
+Built with `mdbook` and `tldr`,
+it provides simple and easy-to-navigate references,
+ideal for fast lookups and practical examples.
+
+The goal is to present information in a way that is both simple and comprehensive,
+making it **easier to understand** and apply in **real-world scenarios**.
+
+
 
 # Installing Dependencies
 
@@ -23,7 +36,7 @@ cargo install mdbook mdbook-toc
 ```
 
 
-# Self-Hosting the web server
+# Self-Hosting the website
 
 
 ```sh

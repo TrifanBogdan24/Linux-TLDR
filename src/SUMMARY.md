@@ -16,8 +16,8 @@
     - [GRE](content/Linux-Networking/IP/use-of-ip/GRE.md)
 
 
-- [WireGuard](./content/Linux-Networking/wg.md)
-
+- [WireGuard](content/Linux-Networking/WireGuard/wg.md)
+  - [wg-easy](./content/Linux-Networking/WireGuard/wg-easy.md)
 
 ## SSH
 - [SSH](content/Linux-Networking/SSH.md)

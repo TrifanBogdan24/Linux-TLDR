@@ -4,6 +4,8 @@
 
 You can find all information here: <https://www.wireguard.com/>.
 
+> You can also find relevant informantion at [this link](https://ocw.cs.pub.ro/courses/isc/labs/10).
+
 
 ## **TL;DR**
 ---

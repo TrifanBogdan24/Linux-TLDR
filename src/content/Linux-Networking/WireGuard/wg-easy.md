@@ -9,8 +9,16 @@ Is the **Web GUI for WireGuard**.
 ![img](https://github.com/wg-easy/wg-easy/raw/master/assets/screenshot.png)
 
 
+## 1. Install Docker
+---
 
-## Generating bcrypt password hash
+```sh
+curl -sSL https://get.docker.com | sh
+sudo usermod -aG docker $(whoami)
+exit        # Close the shell, so modifications take effect
+```
+
+## 2. Generate bcrypt password hash
 ---
 
 
@@ -26,7 +34,7 @@ PASSWORD_HASH='$2b$12$coPqCsPtcFO.Ab99xylBNOW4.Iu7OOA2/ZIboHN6/oyxca3MWo7fW' // 
 ```
 
 
-## Port Forwarding
+## 3. Port Forwarding
 ---
 
 `wg-easy` uses:
@@ -35,11 +43,37 @@ PASSWORD_HASH='$2b$12$coPqCsPtcFO.Ab99xylBNOW4.Iu7OOA2/ZIboHN6/oyxca3MWo7fW' // 
 
 
 Make sure to configure on your (home) router **port forwarding** rules 
-that allow connections on these specific port towards the device running the **WireGuard** server.
+that allow connections on these specific ports towards the device running the **WireGuard** server.
 
 
 
-## Using `docker compose`
+## 4. Deploy WireGuard Easy
+
+### Using `docker` CLI
+---
+
+
+```sh
+docker run --detach \
+  --name wg-easy \
+  --env LANG=de \
+  --env WG_HOST=<🚨YOUR_SERVER_IP> \
+  --env PASSWORD_HASH='<🚨YOUR_ADMIN_PASSWORD_HASH>' \
+  --env PORT=51821 \
+  --env WG_PORT=51820 \
+  --volume ~/.wg-easy:/etc/wireguard \
+  --publish 51820:51820/udp \
+  --publish 51821:51821/tcp \
+  --cap-add NET_ADMIN \
+  --cap-add SYS_MODULE \
+  --sysctl 'net.ipv4.conf.all.src_valid_mark=1' \
+  --sysctl 'net.ipv4.ip_forward=1' \
+  --restart unless-stopped \
+  ghcr.io/wg-easy/wg-easy
+```
+
+
+### Using `docker compose`
 ----
 
 Source of information is at [this link](https://docs.techdox.nz/wgeasy/).

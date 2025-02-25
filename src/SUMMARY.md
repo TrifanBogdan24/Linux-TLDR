@@ -94,9 +94,11 @@
 - [Installation](./content/Docker/installation.md)
   - [On Ubuntu](content/Docker/Installtation/on-Ubuntu.md)
 - [Docker](./content/Docker/docker.md)
+  - [Tutorial Roadmap](./content/Docker/tutorial-roadmap.md) 
   - [Dockerfile](./content/Docker/docker-file.md)
   - [docker image](./content/Docker/docker-image.md)
   - [docker container](./content/Docker/docker-container.md)
+  - [DockerHub Registry](content/Docker/dockerhub-registry.md)
 - [Docker Compose](./content/Docker/docker-compose.md)
 
 

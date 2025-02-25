@@ -22,3 +22,21 @@ docker image prune --all
 # Show the history of a local Docker image:
 docker image history <image>
 ```
+
+
+## Image interaction
+---
+
+
+```sh
+docker image pull <IMAGE>.      # downloads an image to the local cache
+docker build -t <TAG> .         # builds an image from a Dockerfile located in the current folder
+
+docker image ls                 # lists the images in the local cache
+docker images                   # lists the images in the local cache
+
+docker image rm <IMAGE>         # deletes an image from the local cache
+docker rmi <IMAGE>              # deletes an image from the local cache
+
+docker image inspect <IMAGE>    # shows information about an image
+```

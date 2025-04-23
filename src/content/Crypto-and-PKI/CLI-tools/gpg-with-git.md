@@ -8,9 +8,30 @@ Useful links (and source of information ofc):
 <iframe width="500" height="300" src="https://www.youtube.com/embed/2ISu2KTPzuQ" title="Source Control Tip 19: Signing a commit via GPG" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
+## Generate a GPG key pair
+---
+
 ```sh
 gpg --full-generate-key
 ```
+
+When prompted, choose the following options:
+- **Key type**: Press `Enter` to accept the **(1) RSA and RSA (default)**
+- **RSA keysize**: I opt for **4096**
+- **Real name**: you can leave this blank (is not necessary for signing commits/tags)
+- **Email address**: Use the **same email** you’ve configured in Git and on GitHub:
+    - > 🔗 Your email must match across Git, GitHub, and the GPG key for verification to work properly.
+    - Setting your email address for every repository on your computer
+    ```sh
+    git config --global user.email "your_email@example.com"
+    ```
+
+[![img](./Images/gpg-keygen-options-for-git.png)](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key)
+
+
+## Export public GPG key
+---
+
 
 ```sh
 $ gpg --list-secret-keys --keyid-format=long
@@ -35,6 +56,10 @@ The above command will print your **public GPG key**
 Copy its output and:
 
 
+## Add public GPG key to GitHub
+---
+
+
 1. In the upper-right corner of any page on GitHub, click your profile photo, then click **⚙️ Settings**.
 2. In the "Access" section of the sidebar, click **🔑 SSH and GPG keys**.
 3. Next to the "GPG keys" header, click **New GPG key**.
@@ -44,6 +69,10 @@ Copy its output and:
 7. If prompted, authenticate to your GitHub account to confirm the action.
 
 > On **GitHub**, in the **🔑 SSH and GPG keys** section,<br>you can check the `Flag unsigned commits as unverified` box (at the bottom of the page).
+
+
+## Git config with GPG
+---
 
 
 Configuring `git` to use the GPG key for **signing** **all** commits and tags:
